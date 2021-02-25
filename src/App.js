@@ -13,9 +13,9 @@ const App = () => {
       <Navigation />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
+        <ProtectedRoute exact path="/about" component={About} />
         <ProtectedRoute exact path="/contact" component={Contact} />
-        <Route exact path="/profile/:name" component={Profile} />
+        <ProtectedRoute exact path="/profile/:name" component={Profile} />
         <Route exatct path="*" component={() => "404 Not Found"} />
       </Switch>
     </BrowserRouter>
