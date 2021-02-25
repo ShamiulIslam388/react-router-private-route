@@ -1,7 +1,15 @@
-import react from "react";
+import React from "react";
+import auth from "../Auth";
 
-const Home = () => {
-  return <div className="container">Home</div>;
+const Home = (props) => {
+  const loginHandler = () => auth.login(() => props.history.push("/contact"));
+
+  return (
+    <div className="container">
+      <h3>Home</h3>
+      <button onClick={loginHandler}>login</button>
+    </div>
+  );
 };
 
 export default Home;
