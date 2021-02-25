@@ -1,8 +1,10 @@
 import React from "react";
-import auth from "../Auth";
 
 const Home = (props) => {
-  const loginHandler = () => auth.login(() => props.history.push("/contact"));
+  const loginHandler = () => {
+    localStorage.setItem("token", "secret token");
+    props.history.push("/contact");
+  };
 
   return (
     <div className="container">

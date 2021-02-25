@@ -1,8 +1,10 @@
 import React from "react";
-import auth from "../Auth";
 
 const Contact = (props) => {
-  const logoutHandler = () => auth.logout(() => props.history.push("/"));
+  const logoutHandler = () => {
+    localStorage.removeItem("token");
+    props.history.push("/");
+  };
 
   return (
     <div className="container">
