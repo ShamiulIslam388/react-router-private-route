@@ -2,3 +2,32 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.nav-container {
+  width: 100%;
+  height: 80px;
+  background: #000;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 5px 10px;
+  margin: 0 15px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #fff;
+}
